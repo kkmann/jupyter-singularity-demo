@@ -12,3 +12,13 @@ Since the user home folder during execution of the container image will typicall
 
 Following the helpful discussion in https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/wyxST5kHmCg (thanks!), I implemented a minimal working example of how to set up a reproducible jupyter notebook using singularity in this repository.
 In essence, I redirect the jupyter search paths to the system config locations manually and, just to be absolutely sure, run the container with the `--no-home` option which disables the default of mounting the  user home.
+
+First, build the container
+```
+sudo ./build-container
+```
+then start the notebook server 
+```
+./start-notebook-server
+```
+Follow the link given in the command line to open the browser interface to the notebook server and open the `demo.ipynb` notebook which uses an IRkernel and just contains a single line of R code.
