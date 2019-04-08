@@ -11,7 +11,7 @@ By default, jupyter writes kernel files in the users `~/.jupyter` configuarion f
 Since the user home folder during execution of the container image will typically differ from the one during building the container (root!), this means that jupyter will complain about missing kernel files.
 
 Following the helpful discussion in https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/wyxST5kHmCg (thanks!), I implemented a minimal working example of how to set up a reproducible jupyter notebook using singularity in this repository.
-In essence, I redirect the jupyter search paths to the system config locations manually and, just to be absolutely sure, run the container with the `--no-home` option which disables the default of mounting the  user home.
+In essence, I redirect the jupyter search paths to the system config locations manually.
 
 First, build the container
 ```
