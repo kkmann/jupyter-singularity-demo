@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkdir -p .jupyter
+
+singularity exec \
+  --bind $PWD/.jupyter:/run/user container.sif \
+  jupyter notebook \
+  --ip=127.0.0.1 --no-browser

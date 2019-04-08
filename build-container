@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rm -rf container.sif
+
+singularity build container.sif recipe.singularity
