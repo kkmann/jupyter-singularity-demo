@@ -2,10 +2,11 @@
 
 set -e
 
-mkdir -p .jupyter
+mkdir -p .jupyter/home
 
 singularity exec \
   --bind $PWD/.jupyter:/run/user \
+  --home $PWD/.jupyter/home \
   container.sif \
   jupyter notebook \
   --ip=127.0.0.1 --no-browser
