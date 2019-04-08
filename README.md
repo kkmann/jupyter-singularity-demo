@@ -12,7 +12,7 @@ Since the user home folder during execution of the container image will typicall
 
 Following the helpful discussion in https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/wyxST5kHmCg (thanks!), I implemented a minimal working example of how to set up a reproducible jupyter notebook using singularity in this repository.
 In essence, I redirect the jupyter search paths to the system config locations manually.
-
+During runtime, the home directory of the container is redirected to a temporary folder to avoid any dependencies on further configuration files.
 First, build the container
 ```bash
 $ sudo ./build-container
